@@ -1,8 +1,9 @@
 # Féléves beadandó feladatok
 
 Az alábbi feladatok közül választhatsz.
-A választásodat az alábbi linken tudod jelezni:
-https://docs.google.com/spreadsheets/d/1gYjh9nP_4Tlyztb_qRspgpy2uyzU4NW7UGzqiD4sVVs/edit?usp=sharing
+A választásodat az e-mailben kiküldött táblázatba tudod bírni.
+
+(a file loggolva van ha valaki kitörli a másikat aki ezután panaszt tesz kizárás jár érte)
 
 ## Szabályok:
 
