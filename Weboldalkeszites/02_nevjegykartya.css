@@ -1,0 +1,129 @@
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+  
+  
+  /*hozzáadni egy átlátszó fehér hátteret, lekerekíteni a sarkait és árnyékot adni hozzá:*/
+  .profile-card {
+    
+    width: 480px;
+    max-width: calc(100vw - 10px);
+    background-color: hsla(0, 0%, 100%, .5);
+    border-radius: 4px;
+    box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+  }
+  
+  .head, .links {
+    text-align: center;
+    
+  }
+  
+  .head, .content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  /*fekete csik*/
+  img {
+    padding: 1px;
+    background-color: #666;
+  }
+  
+  /*vonal*/
+  .content {
+    border-top: 1px solid hsla(0, 0%, 30%, .8);
+    
+  }
+  
+  .profile-image {
+    margin-top: 10px;
+  }
+  
+  /*interakció*/
+  img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /*halványabb szinek*/
+  img {
+    
+    filter: grayscale(50%);
+  }
+  
+  img:hover {
+    
+    filter: grayscale(20%);
+  }
+  
+  /* Contact links */
+  
+  ul {
+    list-style-type: none;
+    
+  }
+  
+  li {
+    display: inline;
+  }
+  
+  /*egy szellősebb elrendezés, több térközzel*/
+  .head, .about {
+    margin-bottom: 10%;
+  }
+  
+  .content {
+    padding: 5% 10%;
+  }
+  
+  body {
+   /* background: url('http://i.imgur.com/9kh3G8L.jpg') no-repeat center center fixed; */
+    background-size: cover;
+  }
+  
+  .social-icon{
+    color:black;
+  }
+  
+  
+  
+  /*
+  .head{
+    background-color: hsla(0, 100%, 50%, .5);
+  }
+  .profile-image{
+    background-color: hsla(313, 94%, 50%, .4);
+  }
+  .name-headline{
+    background-color: hsla(278, 94%, 50%, .4);
+  }
+  .content{
+     background-color: hsla(202, 100%, 50%, .4);
+  }
+  .about{
+     background-color: hsla(146, 94%, 50%, .4);
+  }
+  .links{
+     background-color: hsla(146, 94%, 24%, .4);
+  }
+  */
