@@ -12,6 +12,7 @@ A választásodat az e-mailben kiküldött táblázatba tudod bírni.
   - Mi volt a beadott prompt és mi volt a válasz. Melyik felületet használtad erre a célra.
   - Végrehajtott módosítás
 - Külsős segítség gyanúja esetén szóbeli védéssel lehet érdemjegyet szerezni
+- Akik ugyanazt készítik egyszerre lesznek értékelve és nagy hasonlóság esetén mindketten szóbeli védéssel kell megvédjék.
 
 ## 1. Személyes Portfólió Weboldal
 
