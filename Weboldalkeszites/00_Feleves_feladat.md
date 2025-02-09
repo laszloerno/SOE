@@ -1,6 +1,16 @@
 # Féléves beadandó feladatok
 
-Az alábbi feladatok közül választhatsz
+Az alábbi feladatok közül választhatsz.
+A választásodat az alábbi linken tudod jelezni:
+https://docs.google.com/spreadsheets/d/1gYjh9nP_4Tlyztb_qRspgpy2uyzU4NW7UGzqiD4sVVs/edit?usp=sharing
+
+## Szabályok:
+
+- Egy feladatot max két ember választhat!!
+- használható bármilyen segédeszköz pl chatGPT, egyéb AI, de ezeket dokumentálni kell egy fejlesztési dokumentációban:
+  - Mi volt a beadott prompt és mi volt a válasz. Melyik felületet használtad erre a célra.
+  - Végrehajtott módosítás
+- Külsős segítség gyanúja esetén szóbeli védéssel lehet érdemjegyet szerezni
 
 ## 1. Személyes Portfólió Weboldal
 
@@ -117,6 +127,89 @@ Egy fitness vagy edzéstervekkel foglalkozó weboldal, amely tippeket és bemuta
 - Flexbox a tippek és trükkök bemutatására
 - CSS animációk, pl. progress bar az elért eredményekhez
 - Képek és ikonok megfelelő használata vizuális élmény fokozására
+
+## 10. Képzeletbeli Online Könyvesbolt Weboldala
+
+**Leírás:**
+Egy képzeletbeli könyvesbolt weboldala, amely bemutatja a legnépszerűbb könyveket és tartalmaz egy ajánlórendszert.
+
+**Funkciók:**
+
+- Grid alapú könyvrács (könyvborítók és címek egyenletes elrendezésben)
+- Flexbox a fejléc és lábléc kialakítására
+- CSS hover-effektek a könyveken (pl. megjelenik egy „Részletek” gomb)
+- CSS animációk (pl. könyvborítók színátmenetes háttérrel)
+- Reszponzív elrendezés tabletekre és mobilokra
+
+## 11. Egyszerű Online Utazási Blog
+
+**Leírás:**
+
+Egy utazási blog, amely bemutatja különböző országok látványosságait és utazási tippeket.
+
+**Funkciók:**
+
+- Grid alapú galéria képekkel és leírásokkal
+- Flexbox-szal kialakított bejegyzés elrendezés
+- Parallax scrolling effekt (CSS background-attachment: fixed)
+- Hover-effektek a képeken, hogy további információt mutassanak
+- Modern, letisztult tipográfia és színek
+
+## 12. Fiktív Mozi Weboldala
+
+**Leírás:**
+
+Egy mozi hivatalos oldalának statikus változata, amely bemutatja a filmeket, az árakat és az időpontokat.
+
+**Funkciók:**
+
+- Grid alapú filmrács (plakátok és időpontok megjelenítése)
+- Flexbox a navigációs menü és a fejléc számára
+- Hover-effekt a filmekre, amely megmutat egy rövid leírást és vetítési időpontokat
+- CSS animáció a jegyfoglalás gombra (:hover, :active)
+- Reszponzív kialakítás mobil és tablet nézetre is
+
+## 13. Online Múzeum vagy Kiállítás Weboldala
+
+**Leírás:**
+
+Egy online művészeti múzeum vagy kiállítás bemutatása, ahol a látogatók információt kapnak a műtárgyakról és a kiállításokról.
+
+**Funkciók:**
+
+- Grid alapú galéria, amely bemutatja a műalkotásokat
+- Flexbox-szal kialakított oldalstruktúra és navigáció
+- CSS filter és blur effektek használata a kiállítások interaktív megjelenítésére
+- CSS hover és transform használata a műtárgyak nagyítására
+- Parallax görgetési effekt (background-attachment: fixed)
+
+## 14. Weboldal egy Fiktív Egészségügyi Központ Számára
+
+**Leírás:**
+
+Egy képzeletbeli egészségügyi központ weboldala, amely információkat nyújt az orvosokról, a rendelési időkről és a szolgáltatásokról.
+
+**Funkciók:**
+
+- Grid-alapú időpontfoglalási táblázat
+- Flexbox a szakrendelések és az orvosok bemutatására
+- Hover-effekt és animáció a szolgáltatások kártyáin
+- CSS-only accordion stílusú gyakran ismételt kérdések (FAQ) szekció
+- Egyedi ikonok és tipográfia a modern dizájn érdekében
+
+## 15. Online Receptkönyv Weboldal
+
+**Leírás:**
+
+Egy olyan weboldal, amely különböző recepteket mutat be kategóriák szerint.
+
+**Funkciók:**
+
+- Grid elrendezés a receptek bemutatására
+- Flexbox a fejléc, menü és lábléc kialakítására
+- Hover-effekt, amely nagyítja az ételek képeit és megmutatja a recept nevét
+- CSS animált progress bar (@keyframes) az elkészítési idő vizuális ábrázolására
+- Média lekérdezések (@media) a teljes reszponzivitás érdekében
 
 <br>
 <br>
