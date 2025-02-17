@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+header {
+  background-color: #f8f8f8;
+  text-align: center;
+  font-size: 24px;
+}
+
+nav {
+  background-color: #ddd;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+section {
+  display: flex;
+}
+
+article {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  background-color: #f4f4f4;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
