@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 oldal aloldalakkal</title>
+    <link rel="stylesheet" href="stilus.css">
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Weboldal Címe</h1>
+        <nav>
+            <ul>
+                <li><a href="main.html" class="menu-link">Főoldal</a></li>
+                <li><a href="rolunk.html" class="menu-link">Rólunk</a></li>
+                <li><a href="szolgaltatas.html" class="menu-link">Szolgáltatások</a></li>
+                <li><a href="kapcsolat.html" class="menu-link">Kapcsolat</a></li>
+            </ul>
+            <button class="toggle-button" onclick="toggleDarkMode()">🌙 Sötét Mód</button>
+
+        </nav>
+
+    </header>
+
+    <section>
+        <article>
+            <section id="content">
+                <p>Válassz egy menüpontot a fenti navigációban!</p>
+            </section>
+        </article>
+        <aside>
+            <h2>Oldalsáv</h2>
+            <p>Kiegészítő információk vagy reklámok helye.</p>
+        </aside>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Weboldal Készítő</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Az egész dokumentumot figyeljük, nem csak a kezdeti elemeket
+            document.body.addEventListener('click', function (event) {
+                if (event.target.classList.contains('menu-link')) {
+                    event.preventDefault(); // Ne töltse újra az oldalt
+
+                    let page = event.target.getAttribute('href'); // Az adott linkhez tartozó fájl
+
+                    fetch(page) // Az adott fájl betöltése
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('content').innerHTML = html; // Tartalom frissítése
+                            window.history.pushState({}, "", page); // URL frissítése a böngészőben
+                        })
+                        .catch(error => console.error('Hiba történt:', error));
+                }
+            });
+
+            // Böngésző „Vissza” gomb támogatása
+            window.addEventListener("popstate", function () {
+                let path = window.location.pathname.split("/").pop();
+                if (path) {
+                    fetch(path)
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('content').innerHTML = html;
+                        })
+                        .catch(error => console.error('Hiba történt:', error));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

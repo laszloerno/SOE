@@ -1,0 +1,182 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    45deg,
+    #f8f8f8,
+    #c1a3a3
+  ); /* Színátmenetes háttér */
+}
+
+header,
+nav,
+section,
+article,
+aside,
+footer {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+header {
+  background-color: #f8f8f8;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 80px; /* A fixált navbar miatt eltolás kell a tartalomnak */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(136, 136, 137, 0.8); /* Átlátszó háttér */
+  box-shadow: 0 14px 16px rgba(0, 0, 0, 0.8); /* Árnyékhatás */
+  backdrop-filter: blur(1px); /* Üveg effektus háttérrel */
+
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000; /* Mindig a többi elem fölött marad */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+/* Hatás: Amikor a felhasználó ráviszi az egeret egy menüpontra, alatta egy animált vonal jelenik meg. */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Hover effektus a navigációra */
+nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+section {
+  display: flex;
+  padding: 20px;
+  animation: fadeIn 1s ease-in; /* Belépő animáció */
+}
+
+/* Szöveg beúszó animáció */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+article {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+}
+
+/* a content és az oldalsáv megjelenítése*/
+article,
+aside {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+article:hover,
+aside:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+/* Button szinezése */
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 120, 140, 0.4);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 120, 140, 0.6);
+}
+
+/* parallax hatás - a kép mindig a helyén marad */
+.parallax {
+  background-image: url('https://picsum.photos/1200/1000');
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/* kép container */
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-container img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
