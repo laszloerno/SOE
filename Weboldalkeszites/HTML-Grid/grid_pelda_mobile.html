@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Példa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ece9e6, #ffffff);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 15px;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item {
+            background: steelblue;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* 1. Alap Grid (2x3) */
+        .grid-basic {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        /* 2. Grid auto-fill és auto-fit */
+        .grid-auto {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+
+        /* 3. Nested Grid (Grid a Gridben) */
+        .nested-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+            background: lightcoral;
+            border-radius: 5px;
+        }
+
+        /* 4. Grid Template Areas */
+        .grid-template-areas {
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 100px 200px 100px;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            background: navy;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: darkgreen;
+        }
+
+        .main {
+            grid-area: main;
+            background: darkred;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: darkgray;
+        }
+
+        /* Reszponzív Grid - Mobilos elrendezés */
+        @media (max-width: 768px) {
+            .grid-basic {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-template-areas {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Grid Példa</h1>
+
+    <h2>1. Alap Grid (2x3)</h2>
+    <div class="grid-container grid-basic">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <h2>2. Auto-Fill & Auto-Fit</h2>
+    <div class="grid-container grid-auto">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <h2>3. Nested Grid</h2>
+    <div class="grid-container">
+        <div class="grid-item nested-grid">
+            <div class="grid-item">A</div>
+            <div class="grid-item">B</div>
+        </div>
+        <div class="grid-item nested-grid">
+            <div class="grid-item">C</div>
+            <div class="grid-item">D</div>
+        </div>
+    </div>
+
+    <h2>4. Grid Template Areas</h2>
+    <div class="grid-container grid-template-areas">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item sidebar">Sidebar</div>
+        <div class="grid-item main">Main Content</div>
+        <div class="grid-item footer">Footer</div>
+    </div>
+</body>
+
+</html>
