@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #333;
+  padding: 10px 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin: 0 20px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 5% 10%;
+}
+
+/* Az egész lista külalakja */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Fő kategóriák doboza */
+.menusor > li {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 600px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* A kategória nevek (pl. Alkoholos italok) */
+.menusor > li::marker {
+  content: none; /* alapértelmezett marker eltávolítása */
+}
+
+.menusor > li > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Ital dobozok */
+.menusor > li > ul > li {
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding: 10px 15px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(20% - 10px); /* kb. 3 ital fér ki egy sorba */
+  text-align: center;
+}
+
+.foetel-grid {
+  display: grid;
+  gap: 15px;
+  max-width: 900px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+  background: #f0f0f0;
+  font-size: 16px;
+  height: 260px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.basic {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 700px) {
+  .basic {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .basic {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 60px;
+  perspective: 1000px; /* 3D hatás */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  background: #f0f0f0;
+}
+
+.flip-card-back {
+  background-color: #ffe;
+  transform: rotateY(180deg);
+  color: #333;
+}
