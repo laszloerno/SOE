@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #fdf8f3;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: #fff8f0 !important;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #5a3e1b !important;
+  font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+  color: #a34d00 !important;
+}
+
+.navbar-toggler {
+  color: #a34d00;
+}
+.footer {
+  background-color: #5a3e1b;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.sidebar {
+  background-color: #fff4e6;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.food-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: white;
+}
+.food-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.food-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+}
+.food-card:hover .food-overlay {
+  opacity: 1;
+}
+.food-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: #a34d00;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #833b00;
+}
+
+h2,
+h4 {
+  color: #5a3e1b;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

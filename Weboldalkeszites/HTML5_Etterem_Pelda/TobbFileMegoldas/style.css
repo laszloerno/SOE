@@ -1,0 +1,28 @@
+
+.food-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+.food-card:hover {
+  transform: scale(1.05);
+}
+.food-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+}
+.food-card:hover .food-overlay {
+  opacity: 1;
+}
+.food-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
