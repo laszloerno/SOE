@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forduló doboz</title>
+    <style>
+        .doboz {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 50px auto;
+            transition: transform 1.6s, background-color 1.6s;
+            transform-style: preserve-3d;
+        }
+
+        .doboz:hover {
+            transform: rotateY(180deg);
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="doboz"></div>
+
+</body>
+
+</html>
